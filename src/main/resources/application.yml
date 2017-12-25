@@ -1,0 +1,14 @@
+server:
+  port: 3333
+spring:
+  application:
+    name: cloud-turbine
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:123456@localhost:8761/eureka/
+turbine:
+  aggregator:
+    clusterConfig: default
+  clusterNameExpression: new String("default")
+  appConfig: cloud-user,cloud-goods
